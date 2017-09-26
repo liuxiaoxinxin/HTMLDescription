@@ -44,7 +44,7 @@
     [self.view addSubview:self.textView];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button setTitle:@"粘贴网址" forState:0];
+    [button setTitle:@"粘贴测试网址" forState:0];
     [button setTintColor:[UIColor blackColor]];
     button.frame = CGRectMake(20, 180, 80, 40);
     [button addTarget:self action:@selector(paste:) forControlEvents:UIControlEventTouchUpInside];

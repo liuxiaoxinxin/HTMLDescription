@@ -293,7 +293,7 @@
 				TargetAttributes = {
 					1A086E161F67AE1600D65D76 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3H8ZE4PK9A;
+						DevelopmentTeam = PZN4E4LRFY;
 						ProvisioningStyle = Automatic;
 					};
 					1A086E2F1F67AE1700D65D76 = {
@@ -668,9 +668,10 @@
 			baseConfigurationReference = 9B27FC676C036A557A927E3C /* Pods-HTMLDescription.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3H8ZE4PK9A;
+				DEVELOPMENT_TEAM = PZN4E4LRFY;
 				HEADER_SEARCH_PATHS = "\"${SDK_DIR}\"/usr/include/libxml2";
 				INFOPLIST_FILE = HTMLDescription/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -690,9 +691,10 @@
 			baseConfigurationReference = D0A95059A678691D4F68D6F1 /* Pods-HTMLDescription.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3H8ZE4PK9A;
+				DEVELOPMENT_TEAM = PZN4E4LRFY;
 				HEADER_SEARCH_PATHS = "\"${SDK_DIR}\"/usr/include/libxml2";
 				INFOPLIST_FILE = HTMLDescription/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
