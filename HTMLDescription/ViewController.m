@@ -46,7 +46,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setTitle:@"粘贴测试网址" forState:0];
     [button setTintColor:[UIColor blackColor]];
-    button.frame = CGRectMake(20, 180, 80, 40);
+    button.frame = CGRectMake(20, 180, 100, 40);
     [button addTarget:self action:@selector(paste:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
