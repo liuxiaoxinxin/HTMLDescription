@@ -11,7 +11,6 @@
 @implementation ComposeTextParser
 
 - (BOOL)parseText:(nullable NSMutableAttributedString *)text selectedRange:(nullable NSRangePointer)selectedRange {
-
     [text yy_setColor:[UIColor blackColor] range:text.yy_rangeOfAll];
     NSArray *urlResults = [[self regexURL] matchesInString:text.string options:kNilOptions range:text.yy_rangeOfAll];
     NSInteger urlIndex = 0;
@@ -29,7 +28,6 @@
         }
         urlIndex ++;
     }
-    
     return YES;
 }
 

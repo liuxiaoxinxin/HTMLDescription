@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
     self.title = @"抓取网页简介";
     self.cardView = [[URLCardView alloc]init];
     [self.view addSubview:self.cardView];
@@ -45,22 +45,17 @@
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     [button setTitle:@"粘贴测试网址" forState:0];
-    [button setTintColor:[UIColor blackColor]];
+    [button setTintColor:[UIColor blueColor]];
     button.frame = CGRectMake(20, 180, 100, 40);
     [button addTarget:self action:@selector(paste:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)loadHTML:(NSString *)url {
     NSURL *htmlURL = [NSURL URLWithString:url];
     [HTMLDescription captureHTMLDescriptionWithURL:htmlURL complete:^(HTMLModel *data, NSError *error) {
         if (error || data.title == nil) {
-            NSLog(@"error:%@",error.localizedDescription);
+            NSLog(@"error:%@", error.localizedDescription);
             [UIView animateWithDuration:0.2 animations:^{
                 self.cardView.alpha = 0;
             }];
@@ -75,8 +70,8 @@
 
 - (void)clickCard {
     NSURL *url = [NSURL URLWithString:self.textParser.parserURL];
-    SFSafariViewController *vc = [[SFSafariViewController alloc]initWithURL: url];
-    [self presentViewController:vc animated:YES completion:nil];
+    SFSafariViewController *safari = [[SFSafariViewController alloc]initWithURL: url];
+    [self presentViewController:safari animated:YES completion:nil];
 }
 
 - (void)paste:(UIButton *)but {
@@ -85,7 +80,7 @@
 }
 
 - (void)composeTextParser:(ComposeTextParser *)parser discoverURL:(NSString *)url {
-    NSLog(@"URL=\n%@\n",url);
+    NSLog(@"URL=\n%@\n", url);
     [self loadHTML:url];
 }
 @end

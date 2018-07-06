@@ -16,4 +16,5 @@
 @property (nonatomic, strong) UIImageView *imageView;
 
 - (void)setHTMLData:(HTMLModel *)data;
+
 @end

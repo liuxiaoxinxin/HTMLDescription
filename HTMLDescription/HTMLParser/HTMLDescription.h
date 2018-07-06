@@ -10,11 +10,16 @@
 #import "HTMLParser.h"
 
 @interface HTMLModel : NSObject
+
+- (instancetype)initWithHTMLParser:(HTMLParser *)parser url:(NSURL *)url;
+
 @property (nonatomic, strong) NSURL *URL;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *descriptionText;
 @property (nonatomic, strong) NSString *coverURL;
+
 @end
+
 
 @interface HTMLDescription : NSObject
 
